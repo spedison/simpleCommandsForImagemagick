@@ -57,6 +57,18 @@ convert 20240503_101716.jpg -font "Ubuntu-Mono-Bold" \
   convert -list color
 ```
 
+### Remove rotation tags in image file
+
+```(bash)
+   exiftool -Orientation=1 <image file>
+```
+
+## Reduce and Rotate file (in place) without tags
+
+```(bash)
+  convert <filename in>  -rotate -90 -resize 25% <filename out>
+```
+
 ### References
 
   * https://stackoverflow.com/questions/7183420/imagemagick-bold-and-italic-fonts
